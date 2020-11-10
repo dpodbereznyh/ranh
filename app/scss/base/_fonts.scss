@@ -1,0 +1,7 @@
+@import "../abstracts/mixins";
+
+@include font-face("Roboto Condensed", "../fonts/RobotoCondensed/RobotoCondensed-Bold", 700);
+@include font-face("Roboto Condensed", "../fonts/RobotoCondensed/RobotoCondensed-Regular", 400);
+
+
+// @include font-face("icomoon", "../fonts/icomoon/icomoon");
