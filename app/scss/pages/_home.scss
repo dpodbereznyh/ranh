@@ -1,3 +1,6 @@
+.main {
+  overflow: hidden;
+}
 .header {
   padding: 103px 0;
   background: url(../img/header/header-bg.jpg) no-repeat center center/ cover;
@@ -149,6 +152,33 @@
 
   }
 }
+@include laptop {
+  .header {
+    padding: 64px 0;
+  }
+  .header__offer {
+    padding: 16px;
+  }
+  .header__offer_title {
+    font-size: 34px;
+    line-height: 50px;
+  }
+  .header__offer_link {
+    font-size: 34px;
+    line-height: 50px;
+  }
+}
+@include tablet {
+  .header__form {
+    margin-bottom: 32px;
+  }
+}
+@include phones {
+  .header__offer_title {
+    font-size: 26px;
+    line-height: 37px;
+  }
+}
 /*****About*****/
 .about {
   padding: 64px 0;
@@ -186,13 +216,46 @@
     margin-right: 32px;
   }
   &__link_icon {
-    width: 132px;
+    min-width: 132px;
     display: block;
   }
   &__description_text {
     color: $light;
   }
 }
+@include desktop {
+  .about__link_icon {
+    min-width: 92px;
+  }
+}
+@include laptop {
+  .about__translation {
+    width: 88%;
+  } 
+}
+@include tablet {
+  .about__translation {
+    width: 85%;
+  } 
+}
+@include phones {
+  .about {
+    padding: 112px 0;
+  }
+  .about__translation {
+    flex-direction: column;
+    align-items: center;
+    transform: translate(0px,-50%);
+    width: 100%;
+  }
+  .about__link_icon {
+    margin-bottom: 32px;
+  }
+  .about__link {
+    margin-right: 0;
+  }
+}
+
 /*****Navigation*****/
 .navigation {
   padding: 128px 0;
@@ -224,7 +287,7 @@
     margin-bottom: 64px;
   }
   &__item_link {
-    width: 155px;
+    min-width: 155px;
     height: auto;
     display: block;
     img {
@@ -235,9 +298,35 @@
     }
   }
 }
-
+@include desktop {
+  .navigation__dotts {
+    display: none;
+  }
+}
+@include tablet {
+  .navigation {
+    padding: 96px 0;
+  }
+  .navigation__item {
+    margin-bottom: 32px;
+  }
+}
+@include phones {
+  .navigation {
+    padding: 64px 0;
+  }
+}
+@media screen and (max-width: 426px) {
+  .navigation__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation__item_description {
+    text-align: center;
+  }
+}
 /*****Banner*****/
-.banner {
+.offer {
   background: linear-gradient(90deg, #FBBC09 0%, #FFF200 100%);
   >.container-fluid {
     position: relative;
@@ -287,7 +376,27 @@
     height: auto;
   }
 }
-
+@include tablet {
+  .offer__triangle {
+    position: absolute;
+    width: 480px;
+  }
+  .offer__device {
+    max-width: 235px;
+  }
+}
+@include phones {
+  .offer__description, .offer__description_hidden {
+    width: 100%;
+  }
+  .offer__triangle {
+    position: absolute;
+    width: 380px;
+  }
+  .offer__device {
+    max-width: 135px;
+  }
+}
 /*****Footer*****/
 .footer {
   background: $dark;
@@ -301,6 +410,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     &:hover {
       background: $dark_1;
       transition: .35s;
@@ -308,5 +418,11 @@
   }
   &__contact_item_title {
     color: $light;
+    text-align: center;
+  }
+}
+@include laptop {
+  .footer__contact_item {
+    padding: 16px;
   }
 }
