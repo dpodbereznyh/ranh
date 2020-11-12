@@ -1,0 +1,312 @@
+.header {
+  padding: 103px 0;
+  background: url(../img/header/header-bg.jpg) no-repeat center center/ cover;
+  &__form {
+    padding: 32px;
+    background: $light;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  &__form_title {
+    color: $default;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &__form_subtitle {
+    text-align: center;
+    color: $dark_5;
+    margin-bottom: 32px;
+  }
+  &__form_input {
+    width: 100%;
+    border: 1px solid $dark_5;
+    border-radius: 100px;
+    padding: 16px 32px;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::placeholder {
+      font-family: "Roboto Condensed", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $dark;
+    }
+  }
+  &__form_label {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    > .header__form_checkbox:checked + .header__form_checkbox-span::after {
+      content: "";
+      position: absolute;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease;
+      left: 5.5px;
+      top: 50%;
+      width: 8px;
+      height: 5px;
+      border-radius: 1px;
+      border-left: 2px solid $default;
+      border-bottom: 2px solid $default;
+      transform: translate(0,-66%) rotate(-45deg);
+    }
+  }
+  &__form_checkbox {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+  }
+  &__form_checkbox-span {
+    display: block;
+    margin-right: 16px;
+    width: 17px;
+    height: 17px;
+    min-width: 20px;
+    border: 0.5px solid $dark_5;
+    background: $light;
+    position: relative;
+  }
+  &__form_label_link {
+    color: $dark_5;
+  }
+  &__form_btn {
+    max-width: 332px;
+    width: 100%;
+    padding: 16px;
+    background: radial-gradient(50% 3739.96% at 50% 64.41%, #DD363D 0%, #93191E 78.65%);
+    box-shadow: 0px 10px 35px rgba(237, 28, 36, 0.55);
+    border-radius: 100px;
+    border: none;
+    margin: 0 auto;
+    color: $light;
+    transition: .35s;
+    &:hover {
+      box-shadow: none;
+      transition: .35s;
+    }
+  }
+  &__logo {
+    max-width: 260px;
+    height: auto;
+    margin-left: auto;
+    display: block;
+    margin-bottom: 50px;
+  }
+  &__offer {
+    border: 5px solid $light;
+    padding: 32px;
+  }
+  &__offer_title {
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 64px;
+    color: $light;
+    margin-bottom: 10px;
+  }
+  &__offer_link {
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 64px;
+    color: $secondary2;
+    transition: .35s;
+    position: relative;
+    filter: drop-shadow(0px 0px 25px rgba(255, 242, 0, 0.85));
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(16px, -50%);
+      width: 20px;
+      height: 20px;
+      background: $secondary2;
+      border-radius: 50%;
+      transition: .35s;
+    }
+    &:hover {
+      color: $default;
+      transition: .35s;
+      filter: drop-shadow(0px 0px 25px rgba(147, 25, 30, 0.85));
+
+    }
+    &:hover.header__offer_link::before {
+      background: $default;
+      transition: .35s;
+    }
+
+  }
+}
+/*****About*****/
+.about {
+  padding: 64px 0;
+  // height: 222px;
+  background: linear-gradient(89.96deg, #93191E 38.54%, #FBBC09 99.95%);
+  &__wrap {
+   position: relative;
+  }
+  &__description {
+    margin-left: auto;
+    visibility: hidden;
+  }
+  &__triangle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(22px, -50%);
+    max-width: 422px;
+    img {
+      filter: drop-shadow(0px 10px 35px rgba(237, 28, 36, 0.55));
+
+    }
+  }
+  &__translation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transform: translate(91px, -50%);
+    max-width: 1181px;
+    width: 92%;
+  }
+  &__link {
+    margin-right: 32px;
+  }
+  &__link_icon {
+    width: 132px;
+    display: block;
+  }
+  &__description_text {
+    color: $light;
+  }
+}
+/*****Navigation*****/
+.navigation {
+  padding: 128px 0;
+  >.container-fluid {
+    position: relative;
+  }
+  &__dotts {
+    width: 76px;
+    height: auto;
+    position: absolute;
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__dotts_up {
+    top: 0;
+    left: -128px;
+  }
+  &__dotts_bottom {
+    bottom: 0;
+    right: -128px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+  &__item_link {
+    width: 155px;
+    height: auto;
+    display: block;
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/*****Banner*****/
+.banner {
+  background: linear-gradient(90deg, #FBBC09 0%, #FFF200 100%);
+  >.container-fluid {
+    position: relative;
+  }
+  &__dotts {
+    position: absolute;
+    top: 50%;
+    left: -129px;
+    transform: translate(0, -50%);
+  }
+  &__description_hidden {
+    visibility: hidden;
+    width: 60%;
+  }
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 58px 0;
+  }
+  &__description {
+    position: absolute;
+    width: 60%;
+    max-width: 765px;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: block;
+    z-index: 1;
+  }
+  &__triangle {
+    position: absolute;
+    width: 604px;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    transform: translate(55px, 0);
+    img {
+      // filter: drop-shadow(0px 10px 55px rgba(251, 188, 9, 0.85));
+    }
+  }
+  &__device {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    max-width: 345px;
+    height: auto;
+  }
+}
+
+/*****Footer*****/
+.footer {
+  background: $dark;
+  &__contact_item {
+    padding: 32px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: $dark;
+    transition: .35s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      background: $dark_1;
+      transition: .35s;
+    }
+  }
+  &__contact_item_title {
+    color: $light;
+  }
+}
