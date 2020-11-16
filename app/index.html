@@ -6,28 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>РАНХиГС</title>
-    <link rel="icon" href="/img/header/header-logo.svg">
+    <meta property="og:title" content="ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ ВО ВЛАДИМИРСКОМ ФИЛИАЛЕ РАНХиГС">
+	<meta property="og:description" content="Трансляция будет проходить на базе платформы YouTube, если вы хотите задавать вопросы, вам необходимо зарегистрироваться на сайте, либо уже иметь учетную запись">
+	<meta property="vk:image" content="img/og/og-vk.jpg">
+	<meta property="og:image" content="img/og/og-vk.jpg">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://ranepa-welcome.ru/index">
+    <link rel="icon" href="img/logo/ico.png">
     <link rel="stylesheet" href="css/main.min.css">
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(69364525, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/69364525" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
 </head>
-
 <body>
 <main class="main">
     <header class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-lg-5">
-                    <form class="header__form">
+                <div class="order-2 order-md-1 col-md-6 col-lg-5">
+                    <form class="header__form" method="POST">
                         <h2 class="header__form_title h2">
                             Зарегистрируйтесь,<br>чтобы принять участие
                         </h2>
                         <p class="header__form_subtitle h5">
                             Оставьте данные, чтобы мы смогли прислать<br>Вам ссылку на трансляцию
                         </p>
-                        <input type="text" class="header__form_input" name="name" placeholder="ФИО">
-                        <input type="email" class="header__form_input" name="email" placeholder="Почта">
-                        <input type="tel" class="header__form_input" name="phone" placeholder="Телефон">
-                        <input type="text" class="header__form_input" name="institution" placeholder="Ваше учебное заведение">
-                        <input type="text" class="header__form_input" name="source-of-information" placeholder="Откуда узнали про мероприятие">
+                        <input type="text" class="header__form_input" name="action" value="users/register" hidden>
+                        <input type="text" class="header__form_input" name="name" placeholder="ФИО" required>
+                        <input type="email" class="header__form_input" name="email" placeholder="Почта" required>
+                        <input type="tel" class="header__form_input" name="phone" placeholder="Телефон" required>
+                        <input type="text" class="header__form_input" name="school" placeholder="Ваше учебное заведение" required>
+                        <input type="text" class="header__form_input" name="info_from" placeholder="Откуда узнали про мероприятие" required>
                         <label class="header__form_label">
                             <input type="checkbox" id="checkbox" class="header__form_checkbox" checked required>
                             <span class="header__form_checkbox-span"></span>
@@ -40,7 +61,7 @@
                         </button>
                     </form>
                 </div>
-                <div class=" col-md-6 col-lg-7">
+                <div class="order-1 order-md-2 col-md-6 col-lg-7">
                     <a href="#" class="header__logo">
                         <img src="/img/header/header-logo.svg" alt="logo">
                     </a>
@@ -48,9 +69,9 @@
                         <p class="header__offer_title">
                             ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ<br>ВО ВЛАДИМИРСКОМ<br>ФИЛИАЛЕ РАНХиГС 
                         </p>
-                        <a href="#" class="header__offer_link">
+                        <span href="#" class="header__offer_link">
                             ОНЛАЙН
-                        </a>
+                        </span>
                     </div>
                     
                 </div>
@@ -67,9 +88,9 @@
                     <img src="img/about/about-triangle.svg" alt="triangle">
                 </div>
                 <div class="about__translation">
-                    <a href="#" class="about__link">
+                    <div href="#" class="about__link">
                         <img src="img/about/about-link.svg" alt="link" class="about__link_icon">       
-                    </a>
+                    </div>
                     <p class="about__description_text h1">
                         Трансляция будет проходить на базе платформы YouTube, если вы хотите  задавать вопросы, вам необходимо зарегистрироваться на сайте, либо уже иметь учетную запись
                     </p>
@@ -85,9 +106,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="navigation__item">
-                        <a href="#" class="navigation__item_link">
+                        <div href="#" class="navigation__item_link">
                             <img src="img/navigation/excursion.svg" alt="Экскурсия">
-                        </a>
+                        </div>
                         <p class="navigation__item_description h2">
                             Видеоэкскурсия по филиалу
                         </p>
@@ -95,9 +116,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="navigation__item">
-                        <a href="#" class="navigation__item_link">
+                        <div href="#" class="navigation__item_link">
                             <img src="img/navigation/info.svg" alt="Инфо">
-                        </a>
+                        </div>
                         <p class="navigation__item_description h2">
                             Много интересной и полезной информации для аббитуриентов
                         </p>
@@ -105,9 +126,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="navigation__item">
-                        <a href="#" class="navigation__item_link">
+                        <div href="#" class="navigation__item_link">
                             <img src="img/navigation/chat.svg" alt="Инфо">
-                        </a>
+                        </div>
                         <p class="navigation__item_description h2">
                             Ответы на вопросы<br>участников чата
                         </p>
@@ -115,9 +136,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="navigation__item">
-                        <a href="#" class="navigation__item_link">
+                        <div href="#" class="navigation__item_link">
                             <img src="img/navigation/puzzle.svg" alt="Инфо">
-                        </a>
+                        </div>
                         <p class="navigation__item_description h2">
                             Знакомство с факультетами
                         </p>
@@ -125,9 +146,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="navigation__item">
-                        <a href="#" class="navigation__item_link">
+                        <div href="#" class="navigation__item_link">
                             <img src="img/navigation/present.svg" alt="Инфо">
-                        </a>
+                        </div>
                         <p class="navigation__item_description h2">
                             Розыгрыш подарков среди участников трансляции
                         </p>
@@ -143,8 +164,7 @@
         <div class="container-fluid">
             <div class="offer__dotts">
                 <img src="img/offer/offer-dotts.svg" alt="offer-dotts">
-            </div>
-        
+            </div>        
             <div class="offer__wrap">
                 <p class="offer__description_hidden h1">
                     Зарегистрируйся и получи шанс выиграть ценные призы - брендированные павербанки, защитные маски многое другое
@@ -167,7 +187,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
-                <a href="#" class="footer__contact_item">
+                <a href="https://www.instagram.com/vladranepa_today/" target="_blank" class="footer__contact_item">
                     <div class="footer__contact_item_image">
                         <img src="img/footer/instagram-icon.svg" alt="instagram">
                     </div>
@@ -177,7 +197,7 @@
                 </a>
             </div>
             <div class="col-sm-4">
-                <a href="#" class="footer__contact_item">
+                <a href="https://vk.com/vladranepa" target="_blank" class="footer__contact_item">
                     <div class="footer__contact_item_image">
                         <img src="img/footer/vk-icon.svg" alt="instagram">
                     </div>
@@ -187,7 +207,7 @@
                 </a>
             </div>
             <div class="col-sm-4">
-                <a href="#" class="footer__contact_item">
+                <a href="https://vlad.ranepa.ru/" target="_blank" class="footer__contact_item">
                     <div class="footer__contact_item_image">
                         <img src="img/footer/web-site-icon.svg" alt="instagram">
                     </div>
@@ -203,4 +223,8 @@
 
 </body>
 </html>
+<head>
+	
+	
+
 

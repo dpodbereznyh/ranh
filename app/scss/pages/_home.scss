@@ -169,7 +169,10 @@
   }
 }
 @include tablet {
-  .header__form {
+  .header {
+    background: url(../img/header/header-mobile-bg.jpg) no-repeat center center/ cover;
+  }
+  .header__offer {
     margin-bottom: 32px;
   }
 }
@@ -216,7 +219,7 @@
     margin-right: 32px;
   }
   &__link_icon {
-    min-width: 132px;
+    min-width: 92px;
     display: block;
   }
   &__description_text {
@@ -288,6 +291,7 @@
   }
   &__item_link {
     min-width: 155px;
+    width: 155px;
     height: auto;
     display: block;
     img {
@@ -325,7 +329,7 @@
     text-align: center;
   }
 }
-/*****Banner*****/
+/*****Offer*****/
 .offer {
   background: linear-gradient(90deg, #FBBC09 0%, #FFF200 100%);
   >.container-fluid {
@@ -391,10 +395,10 @@
   }
   .offer__triangle {
     position: absolute;
-    width: 380px;
+    width: 280px;
   }
   .offer__device {
-    max-width: 135px;
+    display: none;
   }
 }
 /*****Footer*****/
