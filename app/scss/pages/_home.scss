@@ -430,3 +430,15 @@
     padding: 16px;
   }
 }
+.status {
+  font-size: 16px;
+  text-align: center;
+  color: $dark;
+  padding: 32px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $light;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+}
