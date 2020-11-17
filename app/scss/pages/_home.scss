@@ -134,6 +134,7 @@
     color: $secondary2;
     transition: .35s;
     position: relative;
+    margin-bottom: 32px;
     filter: drop-shadow(0px 0px 25px rgba(255, 242, 0, 0.85));
     &::before {
       content: "";
@@ -148,17 +149,21 @@
       border-radius: 50%;
       transition: .35s;
     }
-    &:hover {
-      color: $default;
-      transition: .35s;
-      filter: drop-shadow(0px 0px 25px rgba(147, 25, 30, 0.85));
+    // &:hover {
+    //   color: $default;
+    //   transition: .35s;
+    //   filter: drop-shadow(0px 0px 25px rgba(147, 25, 30, 0.85));
 
-    }
-    &:hover.header__offer_link::before {
-      background: $default;
-      transition: .35s;
-    }
+    // }
+    // &:hover.header__offer_link::before {
+    //   background: $default;
+    //   transition: .35s;
+    // }
 
+  }
+  &__offer_time {
+    margin-top: 16px;
+    color: $light;
   }
 }
 @include laptop {
