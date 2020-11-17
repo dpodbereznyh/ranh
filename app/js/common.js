@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $('#fancyalert').hide();
   $(".header__form").submit(function(){
     var $data = {};
     $(".header__form").find ("input").each(function() {
