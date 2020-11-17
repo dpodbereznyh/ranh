@@ -79,6 +79,15 @@
   }
   &__form_label_link {
     color: $dark_5;
+    transition: .35s;
+    a {
+      color: $error;
+      transition: .35s;
+      &:hover {
+        color: $error_l2;
+        transition: .35s;
+      }
+    }
   }
   &__form_btn {
     max-width: 332px;
@@ -441,4 +450,5 @@
   transform: translate(-50%, -50%);
   background: $light;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
 }

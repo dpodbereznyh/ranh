@@ -44,22 +44,31 @@
                             Оставьте данные, чтобы мы смогли прислать<br>Вам ссылку на трансляцию
                         </p>
                         <input type="text" class="header__form_input" name="action" value="users/register" hidden>
-                        <input type="text" class="header__form_input" name="name" placeholder="ФИО" >
-                        <input type="email" class="header__form_input" name="email" placeholder="Почта" >
-                        <input type="tel" class="header__form_input" name="phone" placeholder="Телефон" >
-                        <input type="text" class="header__form_input" name="school" placeholder="Ваше учебное заведение" >
-                        <input type="text" class="header__form_input" name="info_from" placeholder="Откуда узнали про мероприятие" >
+                        <input type="text" class="header__form_input" name="name" placeholder="ФИО" required>
+                        <input type="email" class="header__form_input" name="email" placeholder="Почта" required>
+                        <input type="tel" class="header__form_input" name="phone" placeholder="Телефон" required>
+                        <input type="text" class="header__form_input" name="school" placeholder="Ваше учебное заведение" required>
+                        <input type="text" class="header__form_input" name="info_from" placeholder="Откуда узнали про мероприятие" required>
                         <label class="header__form_label">
-                            <input type="checkbox" id="checkbox" class="header__form_checkbox" checked >
+                            <input type="checkbox" id="checkbox" class="header__form_checkbox" checked required>
                             <span class="header__form_checkbox-span"></span>
-                            <span class="header__form_label_link smal">
-                                Я согласен на обработку персональных данных
+                            <span class="header__form_label_link small">
+                                Я согласен с <a href="https://vlad.ranepa.ru/upload/iblock/9ca/%D0%9F%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5%20%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.pdf" target="_blank">политикой и положением</a> об обработке персональных данных
                             </span>
                         </label>
                         <button type="submit" class="header__form_btn h4">
                             Отправить
                         </button>
                     </form>
+
+                    <div class="d-none" >
+                        <div id="fancyalert" class="fancyalert">
+                            <div class="fancyalert-text">Спасибо за регистрацию</div>
+                        </div>
+                        <div id="fancyerror" class="fancyalert">
+                            <div class="fancyalert-text">Что пошло не так...</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="order-1 order-md-2 col-md-6 col-lg-7">
                     <a href="#" class="header__logo">
